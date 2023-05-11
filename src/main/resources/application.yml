@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: task-tracker
+  datasource:
+    url: jdbc:postgresql://localhost:5432/task_tracker
+    username: task_tracker_db_client
+    password: task_tracker_db_client
+  liquibase:
+    enabled: true
+    change-log: classpath:db/scripts/changelog-master.xml
+    url: jdbc:postgresql://localhost:5432/task_tracker
+    user: task_tracker_db_admin
+    password: task_tracker_db_admin
+    liquibase-schema: "liquibase"
+    default-schema: "task_tracker"
+  jackson:
+    default-property-inclusion: non_null
+  kafka:
+    bootstrap.servers: localhost:9092
+    user-notifications.topic: user-notifications
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:8090
+        instance:
+          service-url: http://localhost:8081
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+task-tracker:
+  page-default-size: 20
+  page-max-size: 40
+  notification-period: PT01H
+
+server:
+  address: localhost
+  port: 8081

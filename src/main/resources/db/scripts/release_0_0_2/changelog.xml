@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <include file="scripts/create_table_supersprints.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_supersprints_index_for_name.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_table_sprints.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_sprints_index_for_name.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_table_epics.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_epics_index_for_name.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_table_projects.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_table_bugs.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_bugs_index_for_name.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_table_histories.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_histories_index_for_name.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_table_workloads.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_table_tasks.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_table_label.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_table_comments.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_tasks_index_for_name.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_table_notification_subscriptions.sql" relativeToChangelogFile="true"/>
+    <include file="scripts/create_table_scheduler_info.sql" relativeToChangelogFile="true"/>
+</databaseChangeLog>
